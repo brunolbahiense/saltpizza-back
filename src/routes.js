@@ -3,7 +3,9 @@ const instance = require('./connect')
 const routes = express()
 
 
-// Users
+routes.get('/', async (req, res) => {
+    return res.json('pronto para enviar uma pizza')
+})
 routes.post('/', async (req, res) =>{
     const { body } = req
     const obj = {
